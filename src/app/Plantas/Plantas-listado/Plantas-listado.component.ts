@@ -8,7 +8,7 @@ import { PlantaService } from '../planta.service';
 })
 export class PlantasListadoComponent implements OnInit {
   plantas: Array<Planta> = [];
-  constructor(private plantaService: PlantaService) {}
+  constructor(private plantaService: PlantaService) { }
 
   getBooks(): void {
     this.plantaService.getBooks().subscribe((plantas) => {
@@ -24,10 +24,8 @@ export class PlantasListadoComponent implements OnInit {
       return total;
     }, 0);
   }
-  
+
   ngOnInit(): void {
     this.getBooks();
   }
-
-
 }
