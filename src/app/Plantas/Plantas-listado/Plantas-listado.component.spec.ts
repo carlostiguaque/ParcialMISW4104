@@ -2,16 +2,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { PlantasListadoComponent } from './Plantas-listado.component';
-
+import { PlantaService } from '../planta.service';
+import { Planta } from '../planta';
 describe('PlantasListadoComponent', () => {
   let component: PlantasListadoComponent;
   let fixture: ComponentFixture<PlantasListadoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlantasListadoComponent ]
+      imports: [HttpClientModule],
+      declarations: [ PlantasListadoComponent ],
+      providers: [PlantaService]
     })
     .compileComponents();
   }));
