@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Kaisei Decol' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="contenedor1">
+      <div class="title"> Vivero El Otoño</div>
+    </div>
+  </nav>
+  <hr class="sombra">
+  <div>
+    <img src="../../../assets/img/Imagen.png" alt="Logo" class="navbar-image">
+  </div>
+  <hr />
+  <div class="contenedor">
+    <table class="" border="0">
+      <thead class="table-d">
+        <tr>
+          <th>#</th>
+          <th>Nombre Común</th>
+          <th>Tipo</th>
+          <th>Clima</th>
+        </tr>
+      </thead>
+      <tbody class="filas">
+        <tr *ngFor="let plantas of plantas">
+          <td class="id th-id">{{ plantas.id }}</td>
+          <td class="th-nombre">{{ plantas.nombre_comun }}</td>
+          <td class="th-tipo">{{ plantas.tipo }}</td>
+          <td class="th-clima">{{ plantas.clima }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="totales">
+      <p>Total plantas de interior: {{ sumarPorTipo('Interior') }}</p>
+      <p>Total plantas de exterior: {{ sumarPorTipo('Exterior') }}</p>
+    </div>
+    <div>
+      <div class="footer">
+        Contact us: +57 3102105253 - info@viveroelotonio.com - @viveroelotonio
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
